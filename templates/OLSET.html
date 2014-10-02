@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+div#overlay {
+	display: block;
+	opacity: .6;
+	z-index: 2;
+	background: #000;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+}
+div#specialBox {
+	display: block;
+	position: relative;
+	z-index: 3;
+	margin: 150px auto 0px auto;
+	width: 300px; 
+	height: 100px;
+	background: #FFF;
+	color: #000;
+}
+div#wrapper {
+	display: block;
+	opacity: .8;
+	z-index: 2;
+	background:0;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+}
+h1{
+	text-align: center;
+}
+li {
+	text-align: left;
+}
+
+ul {
+	max-width: 600px;
+}
+
+td {
+	max-width: 600px;
+}
+
+.small-italic {
+	font-size:14px;
+	font-style: italic;
+}
+
+</style>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js" ></script>
+<script type="text/javascript" src="https://dl.dropbox.com/s/vtp6geva5b8kkhj/foggy.js?dl=0"></script>
+<script type="text/javascript">
+
+
+function toggleOverlay(){
+	$("#overlay").css("display", "none");
+	$("#specialBox").css("display", "none");
+	$("#wrapper").foggy({blurRadius: 0});
+}
+
+function checkCode(codeCheck){
+	if (codeCheck == "Ruckfie"){
+		toggleOverlay();
+	}else{
+		$("#get-code").val('');
+		alert("Try Again");
+	}
+}
+
+$(document).ready(function(){
+	$("#wrapper").foggy({
+		blurRadius: 10
+	});
+    $("#btn-click").click(function(){
+    	var codeCheck = $("#get-code").val();
+    	checkCode(codeCheck);
+    });
+})
+</script>
+</head>
+<body>
+	<div id="overlay"></div>
+
+	<div id="specialBox">
+  		<h2 class="form-password-heading">Please Enter Secret Code</h2>
+  		<input id="get-code" type="password" class="form-control" placeholder="super secret code" required autofocus />
+  		<button id="btn-click">Enter</button>
+	</div>
+
+	<div id="wrapper">
+		<h1>Malina Arevalo</h1>
+		<h3><span style="float: left">259 Upper Terrace Apt. 1</span><span style="float: right">arevalomalina@gmail.com</span>
+			<br>
+		<span style="float:left">San Francisco, CA. 94117</span><span style="float: right">Telephone: 415-696-3852</span>
+		</h3>
+			<br>
+		<hr>
+		<table cellpadding="10">
+  			<tr>
+    			<td>LANGUAGES AND TOOLS</td>
+    			<td><span style="float:left">Python, Flask, Jinja, JQuery, Sqlite, Sqlalchemy, JavaScript, HTML, CSS, Bootstrap, Ajax</span></td>		
+  			</tr>
+  			<tr>
+  				<td valign="top">TECHNICAL EXPERIENCE</td>
+  				<td>
+  					<span style="float: left">Hackbright Summer 2014 Graduate</span><br/>
+  					<ul>
+  						<li> Graduated intensive 10-week fellowship for women (7.5% acceptance rate) to become a full stack web developer and complete multiple web applications.</li>
+  						</ul>
+  					<span style="float: left"> Projects</span><br/>
+  					<ul>
+  						<li>
+  							Wrote a program that logs into an employee portal, scrapes the landing page and reads a flight attendant schedule in PDF form, parses the data and returns select information from schedules in a usable HTML format.
+  						</li>
+  						<li>
+							Designed and built a web app that allows small scale dog walkers to schedule appointments, process payments, share photos with clients in a real-time feed via the Instagram API, process contract signatures, and manage their clients with an automated notification system for payments and appointment reminders.
+						</li>
+						<li>
+							Built and deployed a Twitter bot that parses n distinct source texts and applies Markov Chains to build predictive "mash-up" content.
+						</li>
+					</ul>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td valign="top">EMPLOYMENT</td>
+  				<td>
+  					<span style="float: left">PRODUCT AND MARKETING SPECIALIST</span><br/>
+  					<span style="float: left;" class="small-italic">Pledgerunner, Benicia, CA</span>
+  					<span style="float: right" class="small-italic">February 2014-June2014</span><br/>
+  					<ul>
+  						<li>
+  							Managed a team of three marketing specialists to design and launch first large scale marketing campaign that was implemented during the SXSW campaign, increasing company’s user base 20-fold.
+  						</li>
+  						<li>
+  							Created content and curated user responses on Twitter and Facebook during marketing campaign to increase social media presence and respond to clients and users.
+  						</li>
+  						<li>
+  							Generated and contacted over one hundred leads for business partnerships with Pledgerunner, resulting in 42% increase in revenue-producing clients.
+  						</li>
+  					</ul>
+  						<br/>
+  					<span style="float: left">FLIGHT ATTENDANT</span><br/>
+ 					<span style="float: left" class="small-italic"> United Airlines, San Francisco, CA</span>
+ 					<span style="float: right" class="small-italic">October 2007-March 2014</span>
+ 						<br/>
+ 					<ul>
+ 						<li>
+ 							Designated Language Speaker for German-speaking patrons on international flights, responsible for in-person German language translation services and delivering public flight announcements
+ 						</li>
+ 						<li>
+ 							Responsible for customer satisfaction by providing in-flight customer service for anywhere from 200 to 1000+ customers per day on international and domestic routes, including being appointed Head Flight Attendant and managing service team
+ 						</li>
+ 						<li>
+ 							Responded to a wide variety inflight medical emergencies, including administering medical assistance, contacting a doctor, and coordinated communication between crew, passengers, and medical staff inflight.
+ 						</li>
+ 					</ul>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td valign = "top">EDUCATION</td>
+  				<td><span style="float: left">SAN FRANCISCO STATE UNIVERSITY</span><br/>
+  				<span style="float: left" class="small-italic">San Francisco, CA. Bachelors in Art History, Bachelors in German Language</span></td>
+  			</tr>
+ 		</table>
+	</div>
+</body>
+</html>
