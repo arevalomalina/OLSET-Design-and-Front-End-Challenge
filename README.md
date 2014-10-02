@@ -43,7 +43,7 @@ Remove the "My Preferences" link in the drop down nav menu and place an edit pre
 ####Option 2:
 Beautify the "Find Hotels" page with photo of hotels that would be suggested for each individual user based on their travel habits. For example, a user whom we know makes frequent business trips to China and has a taste for fine hotels, might see images like this:
 
-![alt tag](https://www.dropbox.com/s/f327eyerkn2kqyp/Screenshot%202014-10-02%2012.30.12.png?dl=0)
+![alt tag](https://dl.dropbox.com/s/f327eyerkn2kqyp/Screenshot%202014-10-02%2012.30.12.png?dl=0)
 
 
 
