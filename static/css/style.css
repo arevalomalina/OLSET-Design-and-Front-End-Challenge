@@ -1,0 +1,78 @@
+div#overlay {
+	display: block;
+	opacity: .6;
+	z-index: 2;
+	background: #000;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+}
+div#specialBox {
+	display: block;
+	position: relative;
+	z-index: 3;
+	margin: 150px auto 0px auto;
+	width: 300px; 
+	height: 100px;
+	background: #FFF;
+	color: #000;
+}
+div#wrapper {
+	display: block;
+	opacity: .8;
+	z-index: 2;
+	background:0;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+}
+h1{
+	text-align: center;
+}
+li {
+	text-align: left;
+}
+
+ul {
+	max-width: 600px;
+}
+
+td {
+	max-width: 600px;
+}
+
+.small-italic {
+	font-size:14px;
+	font-style: italic;
+}
+.details {
+	display: block;
+}
+#address{
+	max-width: 210px;
+	float: left;
+}
+#email-phone{
+	max-width: 210px;
+	float: right;
+}
+table {
+	margin-top: 100px;
+	width: 100%;
+	
+}
+#horizontal-line{
+	margin-top: 100px;
+}
+
+#error-message{
+	display: none;
+	color: red;
+}
+
+

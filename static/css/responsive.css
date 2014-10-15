@@ -1,0 +1,21 @@
+@media only screen and (max-width: 480px) {
+	#email-phone{  
+			margin-left: 90px;
+			margin-top: 20px;
+			float: none;
+            top: 50%;
+            text-align: center;
+            transform: translateY(-50%);
+			}
+	#address{  
+			margin-left: 90px;
+			margin-top: 20px;
+			float: none;
+            top: 50%;
+            text-align: center;
+            transform: translateY(-50%);
+			}
+	#horizontal-line{
+		margin-top: 50px;
+	}
+

@@ -1,111 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style type="text/css">
-div#overlay {
-	display: block;
-	opacity: .6;
-	z-index: 2;
-	background: #000;
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0px;
-	left: 0px;
-	text-align: center;
-}
-div#specialBox {
-	display: block;
-	position: relative;
-	z-index: 3;
-	margin: 150px auto 0px auto;
-	width: 300px; 
-	height: 100px;
-	background: #FFF;
-	color: #000;
-}
-div#wrapper {
-	display: block;
-	opacity: .8;
-	z-index: 2;
-	background:0;
-	width: 100%;
-	height: 100%;
-	top: 0px;
-	left: 0px;
-	text-align: center;
-}
-h1{
-	text-align: center;
-}
-li {
-	text-align: left;
-}
-
-ul {
-	max-width: 600px;
-}
-
-td {
-	max-width: 600px;
-}
-
-.small-italic {
-	font-size:14px;
-	font-style: italic;
-}
-
-</style>
-
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js" ></script>
-<script type="text/javascript" src="https://dl.dropbox.com/s/vtp6geva5b8kkhj/foggy.js?dl=0"></script>
-<script type="text/javascript">
-
-
-function toggleOverlay(){
-	$("#overlay").css("display", "none");
-	$("#specialBox").css("display", "none");
-	$("#wrapper").foggy({blurRadius: 0});
-}
-
-function checkCode(codeCheck){
-	if (codeCheck == "Ruckfie"){
-		toggleOverlay();
-	}else{
-		$("#get-code").val('');
-		alert("Try Again");
-	}
-}
-
-$(document).ready(function(){
-	$("#wrapper").foggy({
-		blurRadius: 10
-	});
-    $("#btn-click").click(function(){
-    	var codeCheck = $("#get-code").val();
-    	checkCode(codeCheck);
-    });
-})
-</script>
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/responsive.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js">
+  </script>
+  <script type="text/javascript" src="https://dl.dropbox.com/s/vtp6geva5b8kkhj/foggy.js?dl=0"></script>
+  <script type="text/javascript" src="../static/js/OLSET.js"></script>
 </head>
+
 <body>
 	<div id="overlay"></div>
-
 	<div id="specialBox">
   		<h2 class="form-password-heading">Please Enter Secret Code</h2>
-  		<input id="get-code" type="password" class="form-control" placeholder="super secret code" required autofocus />
-  		<button id="btn-click">Enter</button>
+  		<h5 id="error-message">Oops, wrong code. Check line 8 of OLSET.js</h5>
+  		<form id="submit-form"><input id="get-code" type="password" class="form-control" placeholder="super secret code" required autofocus />
+  		<button id="btn-click">Enter</button></form>
 	</div>
 
 	<div id="wrapper">
-		<h1>Malina Arevalo</h1>
-		<h3><span style="float: left">259 Upper Terrace Apt. 1</span><span style="float: right">arevalomalina@gmail.com</span>
-			<br>
-		<span style="float:left">San Francisco, CA. 94117</span><span style="float: right">Telephone: 415-696-3852</span>
-		</h3>
-			<br>
-		<hr>
-		<table cellpadding="10">
+		<h1 id="name">Malina Arevalo</h1>
+		<div id="details">
+			<h3>
+				<span id="address" class="details">259 Upper Terrace Apt. 1 San Francisco, CA. 94117</span>
+				<span id="email-phone" class="details">arevalomalina@gmail.com Telephone: 415-696-3852</span>
+			</h3>
+		</div>
+		<hr id="horizontal-line">
+		<table>
   			<tr>
     			<td>LANGUAGES AND TOOLS</td>
     			<td><span style="float:left">Python, Flask, Jinja, JQuery, Sqlite, Sqlalchemy, JavaScript, HTML, CSS, Bootstrap, Ajax</span></td>		
@@ -136,10 +58,10 @@ $(document).ready(function(){
   				<td>
   					<span style="float: left">PRODUCT AND MARKETING SPECIALIST</span><br/>
   					<span style="float: left;" class="small-italic">Pledgerunner, Benicia, CA</span>
-  					<span style="float: right" class="small-italic">February 2014-June2014</span><br/>
+  					<span style="float: center" class="small-italic">February 2014-June2014</span><br/>
   					<ul>
   						<li>
-  							Managed a team of three marketing specialists to design and launch first large scale marketing campaign that was implemented during the SXSW campaign, increasing company’s user base 20-fold.
+  							Managed a team of three marketing specialists to design and launch first large scale marketing campaign that was implemented during the SXSW campaign, increasing company's user base 20-fold.
   						</li>
   						<li>
   							Created content and curated user responses on Twitter and Facebook during marketing campaign to increase social media presence and respond to clients and users.
@@ -151,7 +73,7 @@ $(document).ready(function(){
   						<br/>
   					<span style="float: left">FLIGHT ATTENDANT</span><br/>
  					<span style="float: left" class="small-italic"> United Airlines, San Francisco, CA</span>
- 					<span style="float: right" class="small-italic">October 2007-March 2014</span>
+ 					<span style="float: center" class="small-italic">October 2007-March 2014</span>
  						<br/>
  					<ul>
  						<li>
